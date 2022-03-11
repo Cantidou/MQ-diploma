@@ -8,14 +8,14 @@
 
 @font-face {
   font-family: OpenSans-Regular;
-  src: url(https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Regular.woff);
+  src: url("../fonts/OpenSans-Regular.woff");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: OpenSans-Bold;
-  src: url(https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Bold.woff);
+  src: url("../fonts/OpenSans-Bold.woff");
   font-weight: 700;
   font-style: normal;
 }
@@ -25,12 +25,12 @@
 }
 
 .header {
-  min-width: 1660px;
+  width: 100%;
   min-height: 450px;
 
   color: #ffffff;
 
-  background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/banner-bg.jpg");
+  background-image: url("../images/banner-bg.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -49,6 +49,82 @@
   left: 0;
   right: 0;
   bottom: 0;
+}
+
+.trends-header {
+  font-size: 1.25rem;
+  margin-top: 63px;
+}
+
+.trends {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+
+  max-width: 1660px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.trends h2 a {
+  color: #ffffff;
+}
+
+.trends article {
+  width: 25%;
+  height: 320px;
+  position: relative;
+
+  background-color: #eff6f1;
+}
+
+.trends article:nth-child(1n+2) {
+  margin-left: 0.25%;
+}
+
+.trends article::after {
+  content: "";
+  background-color: #000000;
+  opacity: 60%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.trends-post1 {
+  background-image: url("../images/trend1.jpg");
+}
+
+.trends-post2 {
+  background-image: url("../images/trend2.jpg");
+}
+
+.trends-post3 {
+  background-image: url("../images/trend3.jpg");
+}
+
+.trends-post4 {
+  background-image: url("../images/trend4.jpg");
+}
+
+.trends-post-content {
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0;
+
+  max-height: 285px;
+
+  margin: 17px 20px;
+  padding: 40px 33px;
+  border: 3px solid #b59f5b;
+
+  overflow: hidden;
+  
+  z-index: 1;
 }
 
 .navigation-container {
@@ -91,11 +167,11 @@
   text-decoration: underline;
 }
 
-.logo-container, .logo-container img {
+.logo-container, .logo-container svg {
   display: flex;
 
-  max-width: 179px;
-  height: 41px;
+  width: 100%;
+  max-height: 41px;
 }
 
 h1 {
@@ -127,8 +203,7 @@ h1 {
 }
 
 .post-box {
-  max-width: 778px;
-  min-height: 2420px;
+  max-width: 100%;
 }
 
 .post {
@@ -224,8 +299,7 @@ h2 a:hover {
 }
 
 .sidebar {
-  max-width: 272px;
-  min-height: 2420px;
+  max-width: 100%;
 
   margin-left: 120px;
 }
@@ -341,7 +415,7 @@ h4 {
   cursor: pointer;
 }
 
-button img {
+button svg {
   width: 18px;
   height: 18px;
 }
@@ -499,27 +573,27 @@ button img {
 
   background-size: 20px;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center center;
 }
 
 .social-link-twitter {
-  background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/004-twitter.svg");
+  background-image: url("../svg/004-twitter.svg");
 }
 
 .social-link-pinterest {
-  background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/001-pinterest.svg");
+  background-image: url("../svg/001-pinterest.svg");
 }
 
 .social-link-facebook {
-  background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/002-facebook-logo.svg");
+  background-image: url("../svg/002-facebook-logo.svg");
 }
 
 .social-link-instagram {
-  background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/005-instagram.svg");
+  background-image: url("../svg/005-instagram.svg");
 }
 
 .social-link-tumblr {
-  background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/003-tumblr.svg");
+  background-image: url("../svg/003-tumblr.svg");
 }
 
 .social-link-text {
