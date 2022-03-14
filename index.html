@@ -29,6 +29,9 @@
               </svg>
             </a>
           </div>
+          <div class="burger">
+            <span></span>
+          </div>
           <nav class=nav-list>
             <ul class=nav-list>
               <li class=nav-list-item><a href="#">Главная</a></li>
@@ -247,6 +250,44 @@
         </section>
       </aside>
     </div>
+    <h3 class="shop_header">Наши изделия</h3>
+    <section class="shop_box">
+      <article class="shop_post">
+        <img src="images\shop-item-desk1.jpg" alt="post1_image">
+        <div class="shop_content">
+          <h2 class="post_header"><a href=#>Подушка на диван</a></h2>
+          <p class=post_text>Набор из двух подушек с модными принтами. Видео о создании <a href=#>здесь.</a></p>
+          <div class="price_box">
+            <p class="discount">1000 ₽</p>
+            <p class="price">800 ₽</p>
+            <button class="shop_button" type="submit">В магазин</button>
+          </div>
+        </div>
+      </article>
+      <article class="shop_post">
+        <img src="images\shop-item-desk2.jpg" alt="post2_image">
+        <div class="shop_content">
+          <h2 class="post_header"><a href=#>Кукла «зайчик»</a></h2>
+          <p class=post_text>Интерьерная рукодельная кукла «зайчик», созданию которой посвящена <a href=#>весенняя серия постов</a> в блоге и несколько подкастов.</p>
+          <div class="price_box">
+            <p class="price">3500 ₽</p>
+            <button class="shop_button" type="submit">В магазин</button>
+          </div>
+        </div>
+      </article>
+      <article class="shop_post">
+        <img src="images\shop-item-desk3.jpg" alt="post3_image">
+        <div class="shop_content">
+        <h2 class="post_header"><a href=#>Шестиугольная рамка</a></h2>
+        <p class=post_text>Необычная рамка для украшения дома из видео <a href=#>«Как сделать рамку из подручных средств за 30 минут»</a></p>
+        <div class="price_box">
+          <p class="discount">500 ₽</p>
+          <p class="price">400 ₽</p>
+          <button class="shop_button" type="submit">В магазин</button>
+        </div>
+        </div>
+      </article>
+    </section>
     <footer class=footer>
       <div class=social-box>
         <ul class=social>
@@ -271,5 +312,42 @@
         <a href=#>Copyright © 2009–2019 City Blog LLC.</a>
       </div>
     </footer>
+    <div class="popup">
+      <div class="popup_container">
+        <h3 class="feedback_header">Ваш фидбек</h3>
+        <div class="popup_content">
+          <form class="feedback_form">
+              <label class="select_group">
+                <span class="select_label">Как часто вы заходите на сайт?</span>
+                <select class="select">
+                  <option value="1" selected>Почти каждый день</option>
+                  <option value="2">Раз в несколько дней</option>
+                  <option value="3">Раз в несколько недель</option>
+                  <option value="4">Несколько раз в год</option>
+                </select>
+              </label>
+              <span class="radio_label">Вы подписаны на e-mail рассылку?</span>
+              <div class="radio_group">
+                <label class="radio_text">
+                  <input type="radio" class="radio" name="email" value="yes">
+                  <span class="radio_text_label">Да</span>
+                </label>
+                <label class="radio_text">
+                  <input type="radio" class="radio" name="email" value="no">
+                  <span class="radio_text_label">Нет</span>
+                </label>
+              </div>
+              <label class="text_group">
+                <span class="text_label">Расскажите, какой контент вы хотели бы видеть на нашем сайте?</span>
+                <textarea class="text_area" placeholder="Может, больше рецептов"></textarea>
+              </label>
+              <button class="feedback_button" type="submit">Отправить</button>
+          </form>
+        </div>
+        <a href="#" class="popup_close">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 441 441"><path fill="#fff" stroke="#000" d="M220.336 170.564l.353.353.354-.353L390.288 1.318l49.796 49.773-169.269 169.245-.353.354.353.354 169.269 169.245-49.796 49.796-169.245-169.269-.354-.353-.353.353-169.27 169.269-49.748-49.796 169.245-169.245.353-.354-.353-.354L1.318 51.067 51.09 1.318l169.246 169.246z"/></svg>
+        </a>
+      </div>
+    </div>
   </body>
 </html>
