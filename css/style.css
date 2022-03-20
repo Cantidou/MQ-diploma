@@ -208,15 +208,15 @@ h1 {
   padding-left: 15px;
 }
 
-.post-box {
-  max-width: 100%;
+.content {
+  margin-left: auto;
 }
 
 .post {
   display: flex;
 
-  max-width: 778px;
-  max-height: 294px;
+  max-width: 100%;
+  min-height: 294px;
 }
 
 .post:nth-child(n+2) {
@@ -224,8 +224,8 @@ h1 {
 }
 
 .post-image, .post-image img {
-  max-width: 381px;
-  max-height: 294px;
+  max-width: 100%;
+  max-height: 100%;
 
   background-color: #eff6f1;
 }
@@ -235,7 +235,7 @@ h1 {
   flex-direction: column;
   margin-left: 30px;
 
-  min-width: 370px;
+  max-width: 381px;
   min-height: 294px;
 }
 
@@ -308,83 +308,7 @@ h2 a:hover {
   max-width: 100%;
 
   margin-left: 120px;
-}
-
-.shop_box {
-  display: flex;
-  justify-content: space-between;
-
-  max-width: 1170px;
-
-  margin-left: auto;
   margin-right: auto;
-  padding: 0px 15px 62px 15px;
-}
-
-.shop_post {
-  max-width: 300px;
-  max-height: 440px;
-}
-
-.shop_post_image img {
-  max-width: 100%;
-  max-height: 200px;
-}
-
-.post_text a {
-  color: #b59f5b;
-}
-
-.post_text a:hover {
-  text-decoration: underline;
-}
-
-.price_box {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-
-  position: relative;
-
-  max-width: 100%;
-  height: 50px;
-
-  margin-top: 22px;
-}
-
-.shop_button {
-  font-family: "OpenSans-Bold", Arial, sans-serif;
-  font-size: 14px;
-  text-transform: uppercase;
-  color: #ffffff;
-
-  position: absolute;
-
-  bottom: 0;
-  right: 0;
-
-  width: 140px;
-  height: 100%;
-
-  border: none;
-  background-color: #b59f5b;
-}
-
-.shop_button:hover {
-  background-color: #323232;
-  cursor: pointer;
-}
-
-.discount {
-  text-decoration: line-through;
-}
-
-.shop_content {
-  height: 50%;
-  outline: 1px solid #b59f5b;
-  outline-offset: 22px;
-  margin-top: -20px;
-  padding-top: 25px;        /*добавить отступ снизу*/ /*добавить жирность ценам*/
 }
 
 h3 {
@@ -619,6 +543,83 @@ button svg {
   color: #b59f5b;
 }
 
+.shop_box {
+  display: flex;
+  justify-content: space-between;
+
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+
+  padding: 0px 15px 62px 15px;
+}
+
+.shop_post {
+  max-width: 300px;
+  max-height: 440px;
+}
+
+.shop_post_image img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.post_text a {
+  color: #b59f5b;
+}
+
+.post_text a:hover {
+  text-decoration: underline;
+}
+
+.price_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  position: relative;
+
+  max-width: 100%;
+  height: 50px;
+
+  margin-top: 22px;
+}
+
+.shop_button {
+  font-family: "OpenSans-Bold", Arial, sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #ffffff;
+
+  position: absolute;
+
+  bottom: 0;
+  right: 0;
+
+  width: 140px;
+  height: 100%;
+
+  border: none;
+  background-color: #b59f5b;
+}
+
+.shop_button:hover {
+  background-color: #323232;
+  cursor: pointer;
+}
+
+.discount {
+  text-decoration: line-through;
+}
+
+.shop_content {
+  height: 50%;
+  outline: 1px solid #b59f5b;
+  outline-offset: 22px;
+  margin-top: -20px;
+  padding-top: 25px;        /*добавить отступ снизу*/ /*добавить жирность ценам*/
+}
+
 .footer {
   display: flex;
   flex-direction: column;
@@ -637,7 +638,7 @@ button svg {
   justify-content: center;
   align-items: center;
 
-  min-width: 1170px;
+  max-width: 1170px;
   min-height: 85px;
 
   background-color: #f4f7f6;
@@ -864,6 +865,10 @@ button svg {
 }
 
 @media (min-width: 641px) and (max-width:1200px) {
+  .header {
+    background-image: url("../images/banner-bg-tablet.jpg");
+  }
+
   .nav-list {
     display: none;
   }
@@ -929,8 +934,12 @@ button svg {
     width: calc(50% - 0.25%); /* временно */
   }
 
+  .trends article:nth-child(1n+3) {
+    margin-top: 0.25%;
+  }
+
   .trends article:nth-child(1n+2) {
-    margin: 0;
+    margin-left: 0;
   }
 
   .trends article:nth-child(2n+2) {
@@ -939,5 +948,35 @@ button svg {
 
   h2 a {
     font-size: 0.71em;
+  }
+
+  .post {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .post-content {
+    margin-top: 16px;
+    margin-left: 0;
+  }
+
+  .sidebar {
+    margin-left: 35px;
+  }
+
+  .shop_box {
+    flex-wrap: wrap;
+
+    max-width: 686px;
+  }
+
+  .shop_post:nth-child(1n+3) {
+    margin-top: 57px;
+  }
+}
+
+@media (min-width: 641px) and (max-width:700px) {
+  .shop_content {
+    outline-offset: 5px;
   }
 }
