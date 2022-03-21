@@ -305,7 +305,7 @@ h2 a:hover {
 }
 
 .sidebar {
-  max-width: 100%;
+  max-width: 275px;
 
   margin-left: 120px;
   margin-right: auto;
@@ -392,14 +392,14 @@ h4 {
 .search-form {
   display: flex;
 
-  max-width: 275px;
+  max-width: 100%;
   max-height: 48px;
 
   margin-top: 58px;
 }
 
 .search-area {
-  width: 222px;
+  width: calc(100% - 48px);
   height: 48px;
 
   border: none;
@@ -430,7 +430,7 @@ button svg {
 .subscribe-container {
   margin-top: 57px;
 
-  min-width: 275px;
+  max-width: 100%;
   min-height: 170px;
 }
 
@@ -441,7 +441,7 @@ button svg {
 
 .subscribe-area {
   box-sizing: border-box;
-  max-width: 272px;
+  max-width: 100%;
   min-height: 48px;
 
   border: none;
@@ -455,7 +455,7 @@ button svg {
   text-transform: uppercase;
   color: #ffffff;
 
-  width: 270px;
+  width: 100%;
   min-height: 48px;
 
   margin-top: 17px;
@@ -474,7 +474,7 @@ button svg {
 }
 
 .tags {
-  max-width: 275px;
+  max-width: 100%;
   min-heigth: 154px;
 
   margin-top: 55px;
@@ -548,10 +548,12 @@ button svg {
   justify-content: space-between;
 
   max-width: 1170px;
+  max-height: 1600px;
+
   margin-left: auto;
   margin-right: auto;
 
-  padding: 0px 15px 62px 15px;
+  padding: 0px 38px 62px 38px;
 }
 
 .shop_post {
@@ -559,7 +561,7 @@ button svg {
   max-height: 440px;
 }
 
-.shop_post_image img {
+.shop_post img {
   max-width: 100%;
   max-height: 100%;
 }
@@ -970,13 +972,184 @@ button svg {
     max-width: 686px;
   }
 
+  .shop_post, .shop_post picture {
+    max-width: calc(50% - 0.25%);
+  }
+
   .shop_post:nth-child(1n+3) {
     margin-top: 57px;
   }
+
+  .shop_content {
+    max-width: 292px;
+  }
 }
 
-@media (min-width: 641px) and (max-width:700px) {
+@media (min-width: 641px) and (max-width:720px) {
   .shop_content {
-    outline-offset: 5px;
+    outline-offset: 10px;
   }
+}
+
+@media (min-width: 641px) and (max-width: 700px) {
+  .shop_content {
+    outline-offset: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .header {
+    background-image: url("../images/banner-mobile.jpg");
+
+    height: 640px;
+  }
+
+  .nav-list {
+    display: none;
+  }
+
+.logo-container svg {
+    position: absolute;
+
+    top: 200px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    min-width: 269px;
+    min-height: 61px;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .burger {
+    display: block;
+    position: relative;
+    width: 24px;
+    height: 19px;
+
+    margin-top: auto;
+    margin-right: 15px;
+    margin-bottom: auto;
+    margin-left: auto;
+
+    cursor:  pointer;
+  }
+
+  .burger::before,
+  .burger::after {
+    content: "";
+    background-color: #ffffff;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    left: 0;
+  }
+
+  .burger span {
+    position: absolute;
+    background-color: #ffffff;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    top: 8px;
+  }
+
+  .burger::before {
+    top: 0;
+  }
+
+  .burger::after {
+    bottom: 0;
+  }
+
+  .logo-container {
+    width: 25%;
+  }
+
+  h1 {
+    font-size: 1.625em;
+
+    margin-top: 280px;
+  }
+
+  .trends-header, .shop_header {
+    font-size: 1em;
+  }
+
+  .trends {
+    flex-wrap: wrap;
+  }
+
+  .trends article {
+    width: 100%;
+  }
+
+  .trends article {
+    margin-top: 0.25%;
+  }
+
+  .trends article:nth-child(1n+2) {
+    margin-left: 0;
+  }
+
+  .wrapper {
+    flex-direction: column;
+  }
+
+  .content {
+    margin-right: auto;
+  }
+
+  h2 a {
+    font-size: 0.666em;
+  }
+
+  .post {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .post-content {
+    margin-top: 16px;
+    margin-left: 0;
+  }
+
+  .sidebar {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .sidebar-post {
+    max-width: 100%;
+  }
+
+  .categories {
+    max-width: 100%;
+  }
+
+  .shop_box {
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    max-width: 686px;
+  }
+
+  .shop_post, .shop_post img {
+    display: block;
+    max-width: 100%;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .shop_post:nth-child(1n+2) {
+    margin-top: 37px;
+  }
+
+  .shop_content {
+    max-width: 100%;
+  }
+}
 }
