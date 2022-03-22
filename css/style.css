@@ -184,6 +184,8 @@ h1 {
   box-sizing: border-box;
   position: absolute;
   bottom: 0;
+  left: 0;
+  right: 0;
 
   max-height: 285px;
 
@@ -866,7 +868,7 @@ button svg {
   outline: none;
 }
 
-@media (min-width: 641px) and (max-width:1200px) {
+@media (min-width: 641px) and (max-width:1200px), (orientation: landscape) {
   .header {
     background-image: url("../images/banner-bg-tablet.jpg");
   }
@@ -985,19 +987,19 @@ button svg {
   }
 }
 
-@media (min-width: 641px) and (max-width:720px) {
+@media (min-width: 641px) and (max-width:720px), (orientation: landscape) {
   .shop_content {
     outline-offset: 10px;
   }
 }
 
-@media (min-width: 641px) and (max-width: 700px) {
+@media (min-width: 641px) and (max-width: 700px), (orientation: landscape) {
   .shop_content {
     outline-offset: 0;
   }
 }
 
-@media (max-width: 640px) {
+@media (orientation: portrait) and (max-width: 640px) {
   .header {
     background-image: url("../images/banner-mobile.jpg");
 
