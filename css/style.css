@@ -712,8 +712,8 @@ button svg {
   color: #999999;
 }
 
-.popup {
-  /*visibility: hidden;*/
+.popup_hidden {
+  visibility: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1015,10 +1015,6 @@ button svg {
 
   .copyright {
     margin-top: 50px;
-  }
-
-  .popup_container {
-    /*margin: 4.6vh 1.53vh 0px 1.53vh;*/
   }
 }
 
