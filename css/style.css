@@ -122,13 +122,13 @@ h1 {
   flex-wrap: nowrap;
   justify-content: space-between;
 
-  max-width: 1660px;
+  max-width: 100%;
 
   margin-left: auto;
   margin-right: auto;
 }
 
-.trends h2 a {
+.trends h3 a {
   color: #ffffff;
 }
 
@@ -263,7 +263,7 @@ h1 {
   text-decoration: underline;
 }
 
-h2 a{
+h3 a{
   display: flex;
 
   margin-top: 10px;
@@ -276,7 +276,7 @@ h2 a{
   color: #000000;
 }
 
-h2 a:hover {
+h3 a:hover {
   color: #b59f5b;
 }
 
@@ -314,7 +314,7 @@ h2 a:hover {
   margin-right: auto;
 }
 
-h3 {
+h2 {
   font-family: "OpenSans-Bold", Arial, sans-serif;
   font-size: 14px;
   text-transform: uppercase;
@@ -323,7 +323,7 @@ h3 {
   margin-bottom: 24px;
 }
 
-h3::after {
+h2::after {
   content: "";
   display:block;
   background: #e1d9bd;
@@ -551,7 +551,6 @@ button svg {
   justify-content: space-between;
 
   max-width: 1170px;
-  max-height: 1600px;
 
   margin-left: auto;
   margin-right: auto;
@@ -561,7 +560,6 @@ button svg {
 
 .shop_post {
   max-width: 300px;
-  max-height: 500px;
 }
 
 .shop_post img {
@@ -584,12 +582,14 @@ button svg {
 
   position: relative;
 
-  font-weight: bold;
-
   max-width: 100%;
   height: 50px;
 
   margin-top: 22px;
+}
+
+.price_box p {
+  font-family: "OpenSans-Bold", Arial, sans-serif;
 }
 
 .shop_button {
@@ -617,13 +617,19 @@ button svg {
 
 .discount {
   text-decoration: line-through;
+  font-size: 0.875em;
+}
+
+.price {
+  font-size: 1.25rem;
 }
 
 .shop_content {
-  height: 50%;
+  min-height: 50%;
+
   outline: 3px solid #b59f5b;
   outline-offset: 15px;
-  margin: -20px 0px;
+  margin-top: -20px;
   padding-top: 25px;
 }
 
@@ -962,12 +968,17 @@ button svg {
     margin-left: 0.25%;
   }
 
-  h2 a {
+  h3 a {
     font-size: 0.71em;
   }
 
   .wrapper {
     padding-top: 50px;
+  }
+
+  .content {
+    margin-left: 15px;
+    width: 100%;
   }
 
   .post {
@@ -976,16 +987,27 @@ button svg {
   }
 
   .post-image, .post-image img {
-    max-height: 300px;
+    width: 100%;
+    height: 100%;
   }
 
   .post-content {
+    max-width: 100%;
+
     margin-top: 16px;
     margin-left: 0;
   }
 
+  .post-header a {
+    font-size: 17px;
+  }
+
   .sidebar {
-    margin-left: 35px;
+    margin-right: 15px;
+  }
+
+  .shop_content {
+
   }
 
   .shop_header {
@@ -996,37 +1018,27 @@ button svg {
   .shop_box {
     flex-wrap: wrap;
 
-    max-width: 686px;
-
-    padding-bottom: 80px;
+    padding: 0px 60px 80px 60px;
   }
 
   .shop_post, .shop_post picture {
-    max-width: calc(50% - 0.25%);
+    max-width: calc(50% - 35px);
+  }
+
+  .shop_post:nth-child(2n+2) {
+    margin-left: 70px;
   }
 
   .shop_post:nth-child(1n+3) {
     margin-top: 77px;
   }
 
-  .shop_content {
-    max-width: 292px;
+  .shop_post img {
+    width: 100%;
   }
 
   .copyright {
     margin-top: 50px;
-  }
-}
-
-@media (max-width: 641px), (min-width: 641px) and (max-width:720px) {
-  .shop_content {
-    outline-offset: 10px;
-  }
-}
-
-@media (max-width: 641px), (min-width: 641px) and (max-width: 700px) {
-  .shop_content {
-    outline-offset: 0;
   }
 }
 
@@ -1107,7 +1119,7 @@ button svg {
     margin-top: 280px;
   }
 
-  .trends-header, .shop_header {
+  .trends-header, .shop_header, h2 {
     font-size: 1em;
 
     margin-top: 44px;
@@ -1141,9 +1153,10 @@ button svg {
 
   .content {
     margin-right: auto;
+    margin-left: 0px;
   }
 
-  h2 a {
+  h3 a {
     font-size: 0.666em;
   }
 
@@ -1200,6 +1213,10 @@ button svg {
 
   .shop_post:nth-child(1n+2) {
     margin-top: 56px;
+  }
+
+  .shop_post:nth-child(2n+2) {
+    margin-left: 0px;
   }
 
   .shop_content {
