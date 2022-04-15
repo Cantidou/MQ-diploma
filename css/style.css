@@ -198,13 +198,18 @@ h1 {
   z-index: 1;
 }
 
+.wrapper_container {
+  max-width: 1200px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .wrapper {
   display: flex;
 
   max-width: 1170px;
 
-  margin-left: auto;
-  margin-right: auto;
   padding-top: 64px;
   padding-right: 15px;
   padding-left: 15px;
@@ -218,7 +223,6 @@ h1 {
   display: flex;
 
   max-width: 100%;
-  min-height: 294px;
 }
 
 .post:nth-child(n+2) {
@@ -555,16 +559,31 @@ button svg {
   margin-left: auto;
   margin-right: auto;
 
-  padding: 0px 38px 111px 38px;
+  padding: 0px 35px 90px 35px;
 }
 
 .shop_post {
+  display: flex;
+  flex-direction: column;
+
   max-width: 300px;
 }
 
+.shop_content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
+  outline: 3px solid rgba(211, 197, 157, 0.6);
+  outline-offset: 20px;
+
+  margin-top: -15px;
+  padding-top: 15px;
+}
+
 .shop_post img {
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .post_text a {
@@ -622,15 +641,6 @@ button svg {
 
 .price {
   font-size: 1.25rem;
-}
-
-.shop_content {
-  min-height: 50%;
-
-  outline: 3px solid #b59f5b;
-  outline-offset: 15px;
-  margin-top: -20px;
-  padding-top: 25px;
 }
 
 .footer {
@@ -719,7 +729,7 @@ button svg {
 }
 
 .popup_hidden {
-  visibility: hidden;
+  /*visibility: hidden;*/
   display: flex;
   justify-content: center;
   align-items: center;
@@ -744,27 +754,27 @@ button svg {
 
   font-size: 0.8125rem;
 
-  padding-bottom: 54px;
-
   margin: 4.6vh 1.53vh 0px 1.53vh;
 }
 
 .feedback_header {
   font-size: 1.25rem;
 
-  margin: 3vh 0px;
+  margin: 5vh 0px 2vh 0px;
 }
 
 .popup_content {
-  max-width: 331px;
+  max-width: 100%;
+  max-height: 100%;
 
-  margin-left: 26px;
-  margin-right: 26px;
+  margin: 0px 30px;
 }
 
 .popup_content form{
   display: flex;
   flex-direction: column;
+
+  max-height: 100%;
 }
 
 .select_group {
@@ -773,7 +783,7 @@ button svg {
 }
 
 .select_group select {
-  max-width: 331px;
+  max-width: 100%;
   height: 49px;
 
   border: none;
@@ -789,17 +799,21 @@ button svg {
 
   -webkit-appearance: none;
   -moz-appearance: none;
+
+  padding-left: 20px;
+
+  color: rgba(0, 0, 0, 0.54);
 }
 
 .radio_label {
-  margin-top: 2.66vh;
+  margin-top: 3vh;
 }
 
 .radio_text_label {
   display: inline-block;
 
-  margin-top: 10px;
-  margin-right: 20px;
+  margin-top: 5px;
+  margin-right: 5px;
 }
 
 .radio_text_label::before {
@@ -833,24 +847,30 @@ button svg {
 .text_group {
   display: flex;
   flex-direction: column;
+  max-width: 100%;
+  max-height: 180px;
 
-  margin-top: 3.58vh;;
+  margin-top: 3vh;
 }
 
 .text_group textarea {
-  max-width: 331px;
-  height: 132px;
+  max-width: 100%;
+  height: 180px;
 
   border: none;
   outline: none;
   background-color: #f4f7f6;
 
   margin-top: 10px;
-  padding-top: 20px;
+  padding-top: 13px;
   padding-left: 20px;
 
   -webkit-appearance: none;
   -moz-appearance: none;
+}
+
+.text_group textarea:focus {
+  outline: 1px solid #b59f5b;
 }
 
 .feedback_button {
@@ -859,13 +879,14 @@ button svg {
   text-transform: uppercase;
   color: #ffffff;
 
-  max-width:  331px;
+  max-width: 100%;
   height: 49px;
 
   border: none;
   outline: 1px solid #b59f5b;
 
-  margin-top: 2.76vh;
+  margin-top: 2.5vh;
+  margin-bottom: 5.5vh;
 
   background-color: #b59f5b;
 }
@@ -886,7 +907,7 @@ button svg {
   outline: none;
 }
 
-@media (max-width: 641px), (min-width: 641px) and (max-width:1200px) {
+@media (min-width: 641px) and (max-width:1200px) {
   .header {
     background-image: url("../images/banner-bg-tablet.jpg");
   }
@@ -973,17 +994,31 @@ button svg {
   }
 
   .wrapper {
-    padding-top: 50px;
+    padding: 50px 35px 0px 35px;
   }
 
   .content {
-    margin-left: 15px;
     width: 100%;
   }
 
   .post {
     flex-wrap: wrap;
     flex-direction: column;
+  }
+
+  .post:nth-child(n+2) {
+    margin-top: 40px;
+  }
+
+  .post::after {
+    content: "";
+
+    background-color: #eeeeee;
+
+    max-width: 100%;
+    height: 4px;
+
+    margin-top: 19px;
   }
 
   .post-image, .post-image img {
@@ -1004,10 +1039,7 @@ button svg {
 
   .sidebar {
     margin-right: 15px;
-  }
-
-  .shop_content {
-
+    margin-left: 36px;
   }
 
   .shop_header {
@@ -1018,23 +1050,20 @@ button svg {
   .shop_box {
     flex-wrap: wrap;
 
-    padding: 0px 60px 80px 60px;
+    padding: 0px 55px 70px 55px;
   }
 
-  .shop_post, .shop_post picture {
+  .shop_post {
     max-width: calc(50% - 35px);
   }
+
 
   .shop_post:nth-child(2n+2) {
     margin-left: 70px;
   }
 
   .shop_post:nth-child(1n+3) {
-    margin-top: 77px;
-  }
-
-  .shop_post img {
-    width: 100%;
+    margin-top: 57px;
   }
 
   .copyright {
@@ -1042,7 +1071,7 @@ button svg {
   }
 }
 
-@media (max-width: 640px) and (orientation: portrait) {
+@media (max-width: 640px) {
   .header {
     background-image: url("../images/banner-mobile.jpg");
 
@@ -1148,12 +1177,11 @@ button svg {
   .wrapper {
     flex-direction: column;
 
-    padding-top: 44px;
+    padding: 44px 15px 0px 15px;
   }
 
   .content {
-    margin-right: auto;
-    margin-left: 0px;
+    margin: 0;
   }
 
   h3 a {
@@ -1165,15 +1193,28 @@ button svg {
     flex-direction: column;
   }
 
+  .post:nth-child(n+2) {
+    margin-top: 34px;
+  }
+
+  .post::after {
+    margin-top: 22px;
+  }
+
   .post-content {
+    max-width: 100%;
+
     margin-top: 16px;
     margin-left: 0;
+  }
+
+  .post-image, .post-image img {
+    width: 100%;
   }
 
   .sidebar {
     max-width: 100%;
     margin: 0px;
-    padding-top: 44px;
   }
 
   .sidebar-post {
@@ -1200,7 +1241,7 @@ button svg {
 
     max-width: 686px;
 
-    padding-bottom: 70px;
+    padding: 0px 35px 70px 35px;
   }
 
   .shop_post, .shop_post img {
@@ -1230,13 +1271,48 @@ button svg {
 
   .popup_container {
     max-height: 80vh;
-    padding-bottom: 3.27vh;
 
-    margin: 4.6vh 1.53vh 0px 1.53vh;
+    margin: 4.6vh 16px 0px 16px;
+  }
+
+  .text_group textarea {
+    max-height: 100%;
   }
 
   .feedback_header {
     font-size: 1.23em;
+    margin-top: 27px;
+    margin-bottom: 25px;
+  }
+
+  .feedback_button {
+    margin-top: 15px;
+    margin-bottom: 30px;
   }
 }
+
+@media (max-width: 640px) and (orientation: landscape) {
+  .trends-header, .shop_header {
+    font-size: 1.125em;
+  }
+
+  .trends {
+    flex-wrap: wrap;
+  }
+
+  .trends article {
+    width: calc(50% - 0.25%);
+  }
+
+  .trends article:nth-child(1n+3) {
+    margin-top: 0.35%;
+  }
+
+  .trends article:nth-child(1n+2) {
+    margin-left: 0;
+  }
+
+  .trends article:nth-child(2n+2) {
+    margin-left: 0.25%;
+  }
 }
